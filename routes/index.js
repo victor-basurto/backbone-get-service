@@ -14,7 +14,6 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
 	
 	var name = req.body.service || false;
-	var price = req.body.price || false;
 	console.log(name);
 
 
