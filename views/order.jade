@@ -1,0 +1,8 @@
+extends layout
+
+block content
+	.container
+		.row
+			.col-md-offset-4.col-md-4
+				for item in data
+					h1 #{ item.name }

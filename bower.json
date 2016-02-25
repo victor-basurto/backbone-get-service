@@ -1,0 +1,10 @@
+{
+  "name": "service-chooser",
+  "version": "0.0.0",
+  "dependencies": {
+    "backbone-amd": "^1.1.0",
+	"underscore-amd": "^1.5.2",
+	"bootstrap": "^3.3.6",
+    "backbone.localStorage": "~1.1.0"
+  }
+}

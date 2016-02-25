@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	.container
+		.row
+			.col-md-offset-4.col-md-4
+				form#main(method="post", action="/")
+					h1 My Services
+					br
+
+					ul#services
+
+					p#total Total: #[span $0]
+			
+					button#order.btn.btn-primary(type="submit") ORDER
