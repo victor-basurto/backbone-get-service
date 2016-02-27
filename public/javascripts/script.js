@@ -36,10 +36,10 @@ $(function() {
 	 * Service Collection Data
 	 */
 	var services = new app.ServiceList([
-		new app.Service({ name: 'Web Development', Price: 200 }),
-		new app.Service({ name: 'Web Design', Price: 100 }),
-		new app.Service({ name: 'Web Photography', Price: 80 }),
-		new app.Service({ name: 'Coffee Drinking', Price: 200 })
+		new app.Service({ label: 'Web Development', Price: 200 }),
+		new app.Service({ label: 'Web Design', Price: 100 }),
+		new app.Service({ label: 'Web Photography', Price: 80 }),
+		new app.Service({ label: 'Coffee Drinking', Price: 200 })
 	]);
 
 	/**
@@ -59,7 +59,7 @@ $(function() {
 
 		render: function() {
 			// create HTML
-			this.$el.html( '<input type="checkbox" value="1" name="' + this.model.get( 'name' ) + '"/> ' + this.model.get( 'name' ) + ' <span>$' + this.model.get( 'price' ) + '</span>' );
+			this.$el.html( '<input type="checkbox" value="' + this.model.get('label') + '" name="services"/> ' + this.model.get( 'label' ) + ' <span>$' + this.model.get( 'price' ) + '</span>' );
 			this.$( 'input' ).prop( 'checked', this.model.get( 'checked' ) );
 
 			// chain the object

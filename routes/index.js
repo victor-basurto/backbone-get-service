@@ -2,21 +2,18 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function( req, res, next ) {
 	res.render('index', { title: 'Express' });
 });
-/* GET order page. */
-// router.get('/order', function( req, res, next ) {
-//     res.render('order', { title: 'Order' });
-// });
 
 /* POST order page */
-router.post('/', function(req, res, next) {
-	
-	var name = req.body.service || false;
-	console.log(name);
+router.post('/', function( req, res, next ) {
+	var name = req.body.services || [];
 
-
+	res.render('order', { 
+		title: 'Order',
+		data: name 
+	});
 });
 
 module.exports = router;
